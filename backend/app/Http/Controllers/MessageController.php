@@ -14,6 +14,19 @@ class MessageController extends Controller
     /**
      * Send notification to users subscribed to a category.
      *
+     * @param void
+     * @return \Illuminate\Http\Response
+     */
+    public function getAllMessageTypes()
+    {
+        return response()->json([
+            'message_types' => MessageType::getValues()
+        ]);
+    }
+
+    /**
+     * Send notification to users subscribed to a category.
+     *
      * @param App\Http\Requests\SendMessageRequest $request
      * @return \Illuminate\Http\Response
      */
