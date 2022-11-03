@@ -14,7 +14,9 @@ class LogController extends Controller
      */
     public function getAllLogs()
     {
-        $logs = Log::with('user')->get();
+        $logs = Log::with('user')
+                    ->orderBy('created_at', 'DESC')
+                    ->get();
         return response([
             'logs' => $logs
         ]);

@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/message_types', [MessageController::class, 'getAllMessageTypes']);
 Route::post('/send_message', [MessageController::class, 'sendMessage']);
 Route::get('/logs', [LogController::class, 'getAllLogs']);
 
