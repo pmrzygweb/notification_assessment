@@ -7,7 +7,7 @@ const Home = () => {
   const [categories, setCategories] = useState(null);
   const [logs, setLogs] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [message, setMessage] = useState(null);
+  const [message, setMessage] = useState('');
 
   const selectStyles = {
     control: (base, state) => ({
@@ -53,7 +53,7 @@ const Home = () => {
       .then(res => {
         fetchLogs();
       });
-      setMessage(null);
+      setMessage('');
     }
   };
   
